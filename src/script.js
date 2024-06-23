@@ -1,6 +1,15 @@
 let userText = document.getElementById("wc-text");
-
+let userWord = document.getElementById("user-word");
 let API_KEY = "d005d2a608msha616720d96273b5p17058fjsn3a4d7e3b9415";
+
+window.addEventListener("DOMContentLoaded", yourFunc);
+
+function yourFunc() {
+  document.getElementById("home-preloader").style.display = "block";
+  setTimeOut(() => {
+    document.getElementById("home-preloader").style.display = "none";
+  }, 3000);
+}
 
 // Word of the day API ---------
 // Defines word of the day using Dictionary API -------
@@ -29,29 +38,34 @@ wordOfTheDay();
 // Dictionary API ---------------------
 //  search word and return definition
 
-let userWord = document.getElementById("user-word");
-
 function searchWord() {
   let keyword = "universe";
+
   userWord.addEventListener("change", (e) => {
     e.preventDefault();
     keyword = userWord.value;
+    document.getElementById("word--").textContent = keyword;
     console.log(keyword);
 
     let showDefinition = document.getElementById("show-def");
     let showExample = document.getElementById("show-ex");
     showExample.style.fontSize = "1rem";
-    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data[0].meanings[0].definitions[0]);
 
-        showDefinition.innerHTML =
-          data[0].meanings[0].definitions[0].definition;
-        showExample.innerText = data[0].meanings[0].definitions[0].example;
+    async function defineWord() {
+      await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data[0].meanings[0].definitions[0]);
 
-        console.log(showDefinition);
-      });
+          showDefinition.innerHTML =
+            data[0].meanings[0].definitions[0].definition;
+          showExample.innerText = data[0].meanings[0].definitions[0].example;
+
+          console.log(showDefinition);
+        });
+    }
+
+    defineWord();
   });
 }
 

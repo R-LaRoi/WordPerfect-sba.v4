@@ -16,8 +16,8 @@
     <title>WordPerfect</title>
   </head>
   <body>
-    <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid">Navbar</div>
+    <nav class="">
+      <div class="container-fluid">WORDPERFECT</div>
     </nav>
 
     <section class="heading">
@@ -30,36 +30,40 @@
 
       <!-- word of the day and definition -->
       <div class="word-col">
-        <div>word of the day</div>
-        <div id="word-of-day">this is the word</div>
-        <div id="wod-define">this is the definition</div>
+        <div class="w-title">word of the day</div>
+        <div id="word-of-day" class="w-day">searching...</div>
+        <div id="wod-define" class="w-define">searching...</div>
         
-        <a href="#define-word"><button type="button">define</button></a>
+        <a href="#define-word"><button type="button">Search Word</button></a>
         
-        <button type="submit">make word cloud</button>
+        <button type="submit">Make A Word Cloud</button>
       </div>
     </section>
     
     <!--  dictionary word search -->
 
     <section class="dictionary" id="define">
-      <div>dictionary</div>
 
+      <div class="sec-text">
+      <h1>DICTIONARY</h1>
       <div id="define-word">search for word</div>
 
         <input type="text" id="user-word" />
         <button type="submit" id="dictionary-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
 
-      <div id="definition"><h3>Definition:</h3>
-      <div id="show-def"></div>
+      <div id="definition">
+        <h2 id="word--">Universe</h2>
+        <h3>Definition:</h3>
+      <div id="show-def">Our universe, the sum of everything that exists in the cosmos, including time and space itself.</div>
       <small id="show-ex"></small>
+      </div>
       </div>
     </section>
 
 <!-- word cloud -->
     <section>
 <div id="word-cloud" class="img-"></div>
- <textarea name="cloud" id="cloud-txt" cols="30" rows="5"></textarea></div>
+ <textarea name="cloud" id="cloud-text" cols="30" rows="5"></textarea></div>
 
   
   </body>

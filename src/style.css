@@ -3,9 +3,15 @@ body {
 }
 
 nav {
-  /* background-color: rgb(21, 21, 22); */
-  color: rgb(52, 49, 49);
-  /* height: 80px; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(21, 21, 22);
+  color: rgba(30, 251, 30, 0.658);
+  height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  z-index: 100;
+  padding: 20px;
 }
 
 .heading {
@@ -21,14 +27,52 @@ nav {
 
 .dictionary {
   text-align: center;
-  min-height: 80vh;
-  background-color: black;
+  min-height: 100vh;
+  background: url(./assets/words-bkg.png);
   color: whitesmoke;
-  font-size: 2rem;
 }
 
 .word-col {
   text-align: center;
   align-content: center;
   z-index: 99;
+  padding: 1rem;
+}
+
+.w-title {
+  font-size: 2rem;
+}
+.w-day {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.w-define {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.sec-text {
+  padding-top: 9rem;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+button {
+  background-color: rgb(30, 251, 30);
+  color: rgb(34, 32, 32);
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+button:hover {
+  color: rgb(255, 255, 255);
+  background: rgb(23, 22, 22);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
