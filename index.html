@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous" />
+        <script
+      src="https://kit.fontawesome.com/3f93d2c0e4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>WordPerfect</title>
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">Navbar</div>
+    </nav>
+
+    <section class="heading">
+      <video class="video--" playsinline autoplay muted loop id="letters-video">
+        <source
+          src="https://github.com/R-LaRoi/st-roi-studio/assets/114012059/788b38c6-af0b-46b2-9b70-49bcee6de3dc
+"
+          type="video/mp4" />
+      </video>
+
+      <!-- word of the day and definition -->
+      <div class="word-col">
+        <div>word of the day</div>
+        <div id="word-of-day">this is the word</div>
+        <div id="wod-define">this is the definition</div>
+        
+        <a href="#define-word"><button type="button">define</button></a>
+        
+        <button type="submit">make word cloud</button>
+      </div>
+    </section>
+    
+    <!--  dictionary word search -->
+
+    <section class="dictionary" id="define">
+      <div>dictionary</div>
+
+      <div id="define-word">search for word</div>
+
+        <input type="text" id="user-word" />
+        <button type="submit" id="dictionary-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+      <div id="definition"><h3>Definition:</h3>
+      <div id="show-def"></div>
+      <small id="show-ex"></small>
+      </div>
+    </section>
+
+<!-- word cloud -->
+    <section>
+<div id="word-cloud" class="img-"></div>
+ <textarea name="cloud" id="cloud-txt" cols="30" rows="5"></textarea></div>
+
+  
+  </body>
+  <script type="module" src="./src/script.js"></script>
+</html>
