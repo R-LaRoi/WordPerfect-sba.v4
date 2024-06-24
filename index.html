@@ -22,7 +22,7 @@
   </head>
   <body>
     <nav class="">
-      <div class="container-fluid">WORDPERFECT</div>
+      <div class="container-fluid" ">WORDPERFECT</div>
     </nav>
 
     <section class="heading">
@@ -39,39 +39,52 @@
         <div id="word-of-day" class="w-day">searching...</div>
         <div id="wod-define" class="w-define">searching...</div>
         
-        <a href="#define-word"><button type="button">Search Word</button></a>
-        
-        <a href="#word-cloud"><button type="submit">Make A Word Cloud</button></a>
+<button type="button" id="new-word-btn" style="background: #F7FD04">New Word</button>
+            <a href="#define-word"><button type="button" style="background: #F7FD04">Search Word</button></a><br><br>
+        <a href="#word-cloud"><button type="submit" style="background: #FF004D">Make A Word Cloud</button></a>
       </div>
     </section>
     
     <!--  dictionary word search -->
 
-    <section class="dictionary" id="define">
+    <section class="dictionary" id="define-word">
 
       <div class="sec-text">
-      <h1>DICTIONARY</h1>
-      <div id="define-word">search for word</div>
+      <h3 style>Search for a word...</h3>
+      <!-- <div id="define-word">search for word</div> -->
 
         <input type="text" class="input-word" id="user-word" />
         <button type="submit" id="dictionary-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
 
-      <div id="definition">
-        <br><br><br>
+      <div id="definition"  >
+        <!-- <br><br><br> -->
         <h2 id="word--">Universe</h2>
         <h3>Definition:</h3>
       <div id="show-def">Our universe, the sum of everything that exists in the cosmos, including time and space itself.</div>
       <small id="show-ex"></small>
+      <button id="add-word-btn">save word</button>
       </div>
+
+
       </div>
+            <div id="saved-words"></div>
     </section>
 
 <!-- word cloud -->
-    <section>
-<div id="word-cloud"></div>
- <textarea name="cloud" id="cloud-text" cols="30" rows="5"></textarea></div>
+<section class="wc-section">
 
-  
+<div class="cloud-col">
+<div id="word-cloud"><img src="./src/assets/wc.png" class="wc-image">
+</div>
+</div>
+
+<div class = "text-col">
+enter your favorite song, passage, or affirmations and generate a word cloud
+<div>
+<textarea name="cloud" id="cloud-text" cols="30" rows="5" minlength="30" placeholder="because I'm happy"></textarea>
+<button type="submit">CREATE CLOUD</button>
+</div>
+</div>
   </body>
   <script type="module" src="./src/script.js"></script>
 </html>

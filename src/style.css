@@ -6,10 +6,10 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgb(21, 21, 22);
-  color: rgba(30, 251, 30, 0.658);
+  background-color: #ff004d;
+  color: #ffffff;
   height: 80px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   z-index: 100;
   padding: 20px;
 }
@@ -28,8 +28,9 @@ nav {
 .dictionary {
   text-align: center;
   min-height: 100vh;
-  background: url(./assets/words-bkg.png);
-  color: whitesmoke;
+  background: rgb(234, 234, 234);
+  /* background: url(./assets/words-bkg.png); */
+  color: rgb(251, 249, 249);
 }
 
 .word-col {
@@ -54,14 +55,16 @@ nav {
 }
 
 .sec-text {
-  padding-top: 9rem;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
+  margin-top: 5rem;
+  padding: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  width: 70%;
+  background: rgb(33, 32, 32);
+  border-radius: 30px;
 }
 
 button {
-  background-color: rgb(30, 251, 30);
+  /* background-color: #084887; */
   color: rgb(34, 32, 32);
   padding: 15px;
   border: none;
@@ -88,4 +91,46 @@ button:hover {
   font-size: 1rem;
   border-radius: 45%;
   width: 50px;
+}
+
+.def-info {
+  border-top: 40px solid gold;
+  /* padding: 2rem; */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* margin-top: 50px; */
+  height: 200px;
+  width: 300px;
+  color: rgb(33, 32, 32);
+}
+
+.text-col {
+  background-color: rgb(33, 32, 32);
+  color: #f7f7f7;
+}
+
+.cloud-col {
+  padding: 3rem;
+}
+
+.wc-section {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+}
+
+.wc-image {
+  width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 125vh;
+  }
+  .wc-section {
+    display: flex;
+    flex-direction: column;
+  }
 }
