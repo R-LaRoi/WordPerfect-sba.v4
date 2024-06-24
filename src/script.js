@@ -2,15 +2,6 @@ let userText = document.getElementById("wc-text");
 let userWord = document.getElementById("user-word");
 let API_KEY = "d005d2a608msha616720d96273b5p17058fjsn3a4d7e3b9415";
 
-window.addEventListener("DOMContentLoaded", yourFunc);
-
-function yourFunc() {
-  document.getElementById("home-preloader").style.display = "block";
-  setTimeOut(() => {
-    document.getElementById("home-preloader").style.display = "none";
-  }, 3000);
-}
-
 // Word of the day API ---------
 // Defines word of the day using Dictionary API -------
 
