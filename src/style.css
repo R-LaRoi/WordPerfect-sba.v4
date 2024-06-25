@@ -1,5 +1,4 @@
 body {
-  /* font-family: "Archivo Black", sans-serif; */
 }
 
 nav {
@@ -94,7 +93,6 @@ nav {
 }
 
 button {
-  /* background-color: #084887; */
   color: rgb(34, 32, 32);
   padding: 15px;
   border: none;

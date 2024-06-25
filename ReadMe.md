@@ -10,15 +10,18 @@ A Javascript application that allows users to generate a word of the day, a word
 - Use fetch and/or Axios to interact with an external web API.
 - Organize files using modules and imports.
 
-## Features
+## API REFERENCE
 
-- Word of The Day API
+- Word of The Day
+  https://api.api-ninjas.com/v1/randomword
 - Dictionary API
+  https://api.dictionaryapi.dev/api
 - Word Cloud API
+  https://quickchart.io/wordcloud?
 
-## Tech Stack
+## Tech
 
-**Client:** Javascript, HTML, CSS
+**Client:** Javascript, HTML, CSS, Font Awesome, Google Fonts
 
 ## Screenshots
 
