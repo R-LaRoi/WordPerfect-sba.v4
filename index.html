@@ -49,40 +49,52 @@
 
     <section class="dictionary" id="define-word">
 
-      <div class="sec-text">
+      <div class="def-col-1">
       <h3 style>Search for a word...</h3>
-      <!-- <div id="define-word">search for word</div> -->
-
         <input type="text" class="input-word" id="user-word" />
+        
         <button type="submit" id="dictionary-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
 
+<div class = 'def-col-2'>
       <div id="definition"  >
-        <!-- <br><br><br> -->
-        <h2 id="word--">Universe</h2>
-        <h3>Definition:</h3>
+
+        <h1 id="word--">Universe</h1>
+
       <div id="show-def">Our universe, the sum of everything that exists in the cosmos, including time and space itself.</div>
       <small id="show-ex"></small>
+      
       <button id="add-word-btn">save word</button>
       </div>
 
-
       </div>
-            <div id="saved-words"></div>
+<div class ='def-col-3'>
+  <i class="fa-solid fa-star" style= "color:white; font-size: 2rem"></i>
+  <div id='show-list'>
+  </div>
+
+</div>
+     
     </section>
 
 <!-- word cloud -->
 <section class="wc-section">
 
 <div class="cloud-col">
-<div id="word-cloud"><img src="./src/assets/wc.png" class="wc-image">
+<div id="word-cloud">
+  <img src="./src/assets/wc.png" class="wc-image">
 </div>
 </div>
 
-<div class = "text-col">
-enter your favorite song, passage, or affirmations and generate a word cloud
+<div class="text-col">
+  <h1 class="cl-title">CREATE A WORD CLOUD</h1>
+<p>
+enter your favorite song, passage, or affirmations and generate a word cloud</p>
+
 <div>
 <textarea name="cloud" id="cloud-text" cols="30" rows="5" minlength="30" placeholder="because I'm happy"></textarea>
-<button type="submit">CREATE CLOUD</button>
+<br>
+<button type="submit" class="cloud-btn">CREATE CLOUD</button>
 </div>
 </div>
   </body>

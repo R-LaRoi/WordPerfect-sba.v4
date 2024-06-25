@@ -25,14 +25,6 @@ nav {
   z-index: 1;
 }
 
-.dictionary {
-  text-align: center;
-  min-height: 100vh;
-  background: rgb(234, 234, 234);
-  /* background: url(./assets/words-bkg.png); */
-  color: rgb(251, 249, 249);
-}
-
 .word-col {
   text-align: center;
   align-content: center;
@@ -41,11 +33,16 @@ nav {
 }
 
 .w-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 .w-day {
-  font-size: 4rem;
-  font-weight: 800;
+  font-size: 5rem;
+  font-weight: 600;
+  color: #ff004d;
+  border-bottom: 3.5px solid #ff004cd8;
+  margin-bottom: 20px;
 }
 
 .w-define {
@@ -54,13 +51,46 @@ nav {
   margin-bottom: 2rem;
 }
 
-.sec-text {
-  margin-top: 5rem;
-  padding: 5rem;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  width: 70%;
+.dictionary {
+  align-content: center;
+  min-height: 80vh;
+  background: rgb(234, 234, 234);
+  color: rgb(251, 249, 249);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 3rem;
+  color: #222121;
+}
+
+.def-col-1 {
+  min-height: 60vh;
+  position: relative;
+  align-content: center;
+  background-color: rgb(255, 255, 255);
+  padding: 3rem;
+}
+
+.def-col-2 {
   background: rgb(33, 32, 32);
-  border-radius: 30px;
+  color: #f7f7f7;
+  padding: 3rem;
+  align-content: center;
+}
+.def-col-3 {
+  background: #ff004d;
+  color: rgb(37, 37, 37);
+  padding: 3rem;
+}
+
+#add-word-btn,
+#dictionary-btn {
+  background-color: #f7fd04;
+  color: #222121;
+  margin-top: 20px;
+}
+#dictionary-btn:hover,
+#add-word-btn:hover {
+  background: #ff004d;
 }
 
 button {
@@ -80,12 +110,14 @@ button:hover {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
+textarea,
 .input-word {
   border-radius: 30px;
-  padding: 12px;
-  border: 0.5px solid whitesmoke;
-  width: 350px;
+  padding: 15px;
+  border: 2px solid #ff004d;
+  width: 300px;
   background-color: rgb(255, 255, 255);
+  margin-bottom: 10px;
 }
 #dictionary-btn {
   font-size: 1rem;
@@ -93,25 +125,26 @@ button:hover {
   width: 50px;
 }
 
-.def-info {
-  border-top: 40px solid gold;
-  /* padding: 2rem; */
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  /* margin-top: 50px; */
-  height: 200px;
-  width: 300px;
-  color: rgb(33, 32, 32);
-}
-
 .text-col {
   background-color: rgb(33, 32, 32);
   color: #f7f7f7;
+  align-content: center;
+  text-align: center;
+  padding: 3rem;
+  min-height: 80vh;
 }
 
+.cl-title {
+  font-weight: 800;
+  color: #f7fd04;
+}
+
+.cloud-btn {
+  background-color: #f7fd04;
+  color: #222121;
+}
 .cloud-col {
-  padding: 3rem;
+  overflow: hidden;
 }
 
 .wc-section {
@@ -123,14 +156,44 @@ button:hover {
   width: 80%;
 }
 
+#word-- {
+  text-decoration: underline;
+}
+
+.list-item {
+  color: white;
+  font-size: 1.5rem;
+  list-style: none;
+}
 @media screen and (max-width: 768px) {
   .heading {
     display: grid;
     grid-template-columns: 1fr;
-    height: 125vh;
+    height: 90vh;
   }
   .wc-section {
     display: flex;
     flex-direction: column;
+  }
+
+  .video-- {
+    padding-top: 5rem;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .dictionary {
+    align-content: center;
+    min-height: 80vh;
+    background: rgb(28, 28, 28);
+    color: rgb(251, 249, 249);
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 3rem;
+    color: #222121;
+  }
+
+  .def-col-1 {
+    border-top: 30px solid #f7fd04;
   }
 }
