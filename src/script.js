@@ -6,20 +6,18 @@ let showWords = document.getElementById("show-words");
 let API_KEY = "d005d2a608msha616720d96273b5p17058fjsn3a4d7e3b9415";
 let listing = document.getElementById("show-list");
 
-// c9aMxyHrR0kU5Czfop6UOA == RWb8VOQ7cm0kWmwf;
 // Word of the day API ---------
 // Defines word of the day using Dictionary API -------
 
 function wordOfTheDay() {
   let wordOfDay = document.getElementById("word-of-day");
-  // fetch("https://random-word-api.herokuapp.com/word?number=1")
+
   fetch("https://api.api-ninjas.com/v1/randomword", {
     headers: { "X-Api-Key": "4oizHQmbKbbQVNBZoHENP5tGR5mgpaIAucOaRp2T" },
     contentType: "application/json",
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.word);
       let dayWord = data.word;
       wordOfDay.innerText = dayWord;
       fetch(
@@ -27,7 +25,6 @@ function wordOfTheDay() {
       )
         .then((response) => response.json())
         .then((define) => {
-          console.log(define[0]);
           if (define[0].shortdef[0] === "") {
             document.getElementById(
               "wod-define"
@@ -58,7 +55,6 @@ function searchWord() {
     e.preventDefault();
     keyword = userWord.value;
     document.getElementById("word--").textContent = keyword;
-    console.log(keyword);
 
     let showDefinition = document.getElementById("show-def");
     let showExample = document.getElementById("show-ex");
@@ -69,7 +65,6 @@ function searchWord() {
       await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`)
         .then((response) => response.json())
         .then((data) => {
-          console.log(data[0].meanings[0].definitions[0]);
           if (!data[0].meanings[0].definitions[0].definition) {
             showDefinition.innerHTML = `No example provided for ${keyword}.`;
           } else {
@@ -134,7 +129,6 @@ async function makeWordCloud() {
         }),
       })
         .then((response) => {
-          console.log(response);
           return response.text();
         })
         .then((wordCloud) => {
